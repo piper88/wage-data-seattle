@@ -4,9 +4,9 @@
   "description": "",
   "main": "wageData.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/webpack/bin/webpack.js",
-    "build-watch": "./node_modules/webpack/bin/webpack.js -w"
+    "build-watch": "./node_modules/webpack/bin/webpack.js -w",
+    "start": "DEBUG='wage-data-seattle*' node server.js"
   },
   "repository": {
     "type": "git",
