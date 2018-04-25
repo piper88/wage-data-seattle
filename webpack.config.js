@@ -4,18 +4,13 @@ const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
-// module.exports = {
-//   entry: './path/to/my/entry/file.js',
-//   output: {
-//     path: path.resolve(__dirname, 'dist'),
-//     filename: 'my-first-webpack.bundle.js'
-//   }
-// };
-
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
   //dev tool allows you to see where the error happened
   devtool: 'eval',
+  node: {
+   fs: "empty"
+},
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
